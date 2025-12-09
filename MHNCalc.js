@@ -1,7 +1,7 @@
 var myParent = document.body;
 
 //Create array of options to be added
-var array;
+let array;
 LoadData();
 
 //Create and append select list
@@ -21,9 +21,10 @@ for (var i = 0; i < array.length; i++) {
 
 
 async function LoadData(){
-	const Response = await fetch("/Data.txt");
-	const Result = await Response.text();
+	var Response = await fetch("/Data.txt");
+	var Result = await Response.text();
 	array = Result.split(",");
 
 }
+
 
