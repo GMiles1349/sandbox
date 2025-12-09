@@ -1,7 +1,7 @@
 var myParent = document.body;
 
 //Create array of options to be added
-let array;
+let array = [];
 LoadData();
 
 //Create and append select list
@@ -26,6 +26,7 @@ async function LoadData(){
 	array = Result.split(",");
 
 }
+
 
 
 
