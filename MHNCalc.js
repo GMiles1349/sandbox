@@ -20,7 +20,8 @@ LoadData();
 
 
 async function LoadData(){
-	const Response = await fetch("Data.txt");
+	const Response = await fetch("/Data.txt");
 	const Result = await Response.text();
 	console.log(Result);
+
 }
