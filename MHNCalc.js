@@ -21,10 +21,11 @@ for (var i = 0; i < array.length; i++) {
 
 
 async function LoadData(){
-	var Response = await fetch("/Data.txt");
+	var Response = await fetch("Data.txt");
 	var Result = await Response.text();
 	array = Result.split(",");
 
 }
+
 
 
