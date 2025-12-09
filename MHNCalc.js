@@ -1,7 +1,8 @@
 var myParent = document.body;
 
 //Create array of options to be added
-var array = ["Volvo","Saab","Mercades","Audi"];
+var array;
+LoadData();
 
 //Create and append select list
 var selectList = document.createElement("select");
@@ -16,12 +17,13 @@ for (var i = 0; i < array.length; i++) {
     selectList.appendChild(option);
 }
 
-LoadData();
+
 
 
 async function LoadData(){
 	const Response = await fetch("/Data.txt");
 	const Result = await Response.text();
-	console.log(Result);
+	array = Result.split(",");
 
 }
+
